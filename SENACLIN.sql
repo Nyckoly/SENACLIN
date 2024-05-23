@@ -62,3 +62,15 @@ INSERT INTO paciente
 VALUES (6, 'Marcos', '04065211824', 'Rua', 'Mário Augusto dos Santos Lopes', '347', NULL, '13988781045', 'São Vicente');
 
 /* EXERCÍCIO 3 */
+
+INSERT INTO dentista (nome, cro, especialidade, celular)
+VALUES ('Nicole', '111111SP', 'Ortodontia', '11989391713');
+
+INSERT INTO dentista (nome, cro, especialidade, celular)
+VALUES ('Anderson', '222222SP', 'Geral', '11999712589');
+
+INSERT INTO dentista (nome, cro, especialidade, celular)
+VALUES ('Laís', '333333SP', 'Periodontia', '11983893652');
+
+INSERT INTO dentista (nome, cro, especialidade, celular)
+VALUES ('Débora', '444444SP', 'Implantodontia', '11994717607');
