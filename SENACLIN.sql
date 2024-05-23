@@ -35,3 +35,6 @@ CONSTRAINT CK_tipoConsulta CHECK (tipoConsulta='Avaliação' OR tipoConsulta='Tr
 CONSTRAINT FK_Consulta_Paciente FOREIGN KEY (idPaciente) REFERENCES paciente (idPaciente),
 CONSTRAINT FK_Consulta_Dentista FOREIGN KEY (idDentista) REFERENCES Dentista (idDentista)
 );
+
+ALTER TABLE `paciente`
+ADD COLUMN `cidade` VARCHAR(80) NOT NULL;
