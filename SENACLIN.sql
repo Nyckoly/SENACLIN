@@ -74,3 +74,14 @@ VALUES ('Laís', '333333SP', 'Periodontia', '11983893652');
 
 INSERT INTO dentista (nome, cro, especialidade, celular)
 VALUES ('Débora', '444444SP', 'Implantodontia', '11994717607');
+
+/* EXERCÍCIO 4 */
+
+INSERT INTO consulta (dataConsulta, horaConsulta, tipoConsulta, idPaciente, idDentista)
+VALUES ('2024-06-01', '09:30:00', 'Avaliação', 1, 1);
+
+INSERT INTO consulta (dataConsulta, horaConsulta, tipoConsulta, idPaciente, idDentista)
+VALUES ('2024-06-02', '10:00:00', 'Avaliação', 2, 2);
+
+INSERT INTO consulta (dataConsulta, horaConsulta, tipoConsulta, idPaciente, idDentista)
+VALUES ('2024-06-02', '10:30:00', 'Avaliação', 3, 2);
