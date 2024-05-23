@@ -122,4 +122,11 @@ SELECT tipoConsulta, COUNT(idConsulta) AS 'quantidade de consultas' FROM consult
 GROUP BY tipoConsulta;
 
 /* EXERCÍCIO 14 */
-SELECT COUNT(idPaciente) AS 'quantidade de pacientes' FROM paciente 
+SELECT COUNT(idPaciente) AS 'quantidade de pacientes' FROM paciente;
+
+/* EXERCÍCIO 15 */
+SELECT idConsulta, d.nome AS 'nome do dentista', cro, dataConsulta, p.nome AS 'nome do paciente' FROM consulta c
+INNER JOIN dentista d ON c.idDentista = d.idDentista
+INNER JOIN paciente p ON c.idPaciente = p.idPaciente
+WHERE d.idDentista = 'implantodontia'
+ORDER BY DATE(dataConsulta) DESC;
