@@ -120,3 +120,6 @@ GROUP BY MONTH(dataConsulta);
 /* EXERCÍCIO 13 */
 SELECT tipoConsulta, COUNT(idConsulta) AS 'quantidade de consultas' FROM consulta
 GROUP BY tipoConsulta;
+
+/* EXERCÍCIO 14 */
+SELECT COUNT(idPaciente) AS 'quantidade de pacientes' FROM paciente 
