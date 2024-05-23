@@ -89,3 +89,6 @@ UPDATE `senaclin`.`dentista` SET `especialidade`='Geral', `celular`='11994809800
 
 /* EXERCÍCIO 6 */
 UPDATE `senaclin`.`consulta` SET `dataConsulta`='2024-06-03', `horaConsulta`='10:00:00' WHERE  `idConsulta`=3;
+
+/* EXERCÍCIO 7 */
+UPDATE `senaclin`.`consulta` SET `tipoConsulta`='Tratamento', `observacao`='Tratamento será realizado em 10 consultas. Prioridade: Moderada. Remédio aplicado: Ponstan, caso sinta dores' WHERE  `idConsulta`=1;
