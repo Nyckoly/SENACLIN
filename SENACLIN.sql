@@ -130,3 +130,10 @@ INNER JOIN dentista d ON c.idDentista = d.idDentista
 INNER JOIN paciente p ON c.idPaciente = p.idPaciente
 WHERE d.idDentista = 'implantodontia'
 ORDER BY DATE(dataConsulta) DESC;
+
+/* DESAFIO */
+SELECT nome, count(idConsulta) AS 'quantidade de consultas' FROM dentista d
+LEFT JOIN consulta c ON d.idDentista = c.idDentista
+GROUP BY c.idDentista
+ORDER BY idConsulta DESC;
+ 
