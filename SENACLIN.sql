@@ -112,3 +112,8 @@ LEFT JOIN paciente p ON c.idPaciente = p.idPaciente;
 SELECT COUNT(idDentista) AS 'quantidade de dentistas', especialidade FROM dentista
 GROUP BY especialidade
 ORDER BY especialidade ASC
+
+/* EXERCÍCIO 12 */
+SELECT COUNT(idConsulta) AS 'quantidade de consultas', MONTH(dataConsulta) AS 'mês' FROM consulta
+WHERE MONTH(dataConsulta) = 6
+GROUP BY MONTH(dataConsulta)
