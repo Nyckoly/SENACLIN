@@ -97,3 +97,8 @@ UPDATE `senaclin`.`consulta` SET `tipoConsulta`='Tratamento', `observacao`='Trat
 SELECT nome, telefone FROM Paciente
 WHERE cidade='Santos'
 ORDER BY nome ASC
+
+/* EXERCÍCIO 9 */
+SELECT d.nome AS 'nome do dentista', dataConsulta, p.nome AS 'nome do paciente', p.telefone AS 'telefone do paciente' FROM dentista d
+INNER JOIN consulta c ON d.idDentista = c.idDentista
+INNER JOIN paciente p ON c.idPaciente = p.idPaciente
