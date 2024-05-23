@@ -104,9 +104,8 @@ INNER JOIN consulta c ON d.idDentista = c.idDentista
 INNER JOIN paciente p ON c.idPaciente = p.idPaciente;
 
 /* EXERCÍCIO 10 */
-SELECT d.nome AS 'nome do dentista', dataConsulta, p.nome AS 'nome do paciente', p.telefone AS 'telefone do paciente' FROM dentista d
+SELECT d.nome AS 'nome do dentista', dataConsulta, c.tipoConsulta AS 'tipo da consulta' FROM dentista d
 LEFT JOIN consulta c ON d.idDentista = c.idDentista
-LEFT JOIN paciente p ON c.idPaciente = p.idPaciente;
 
 /* EXERCÍCIO 11 */
 SELECT COUNT(idDentista) AS 'quantidade de dentistas', especialidade FROM dentista
