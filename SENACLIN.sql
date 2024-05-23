@@ -96,14 +96,19 @@ UPDATE `senaclin`.`consulta` SET `tipoConsulta`='Tratamento', `observacao`='Trat
 /* EXERCÍCIO 8 */
 SELECT nome, telefone FROM Paciente
 WHERE cidade='Santos'
-ORDER BY nome ASC
+ORDER BY nome ASC;
 
 /* EXERCÍCIO 9 */
 SELECT d.nome AS 'nome do dentista', dataConsulta, p.nome AS 'nome do paciente', p.telefone AS 'telefone do paciente' FROM dentista d
 INNER JOIN consulta c ON d.idDentista = c.idDentista
-INNER JOIN paciente p ON c.idPaciente = p.idPaciente
+INNER JOIN paciente p ON c.idPaciente = p.idPaciente;
 
 /* EXERCÍCIO 10 */
 SELECT d.nome AS 'nome do dentista', dataConsulta, p.nome AS 'nome do paciente', p.telefone AS 'telefone do paciente' FROM dentista d
 LEFT JOIN consulta c ON d.idDentista = c.idDentista
-LEFT JOIN paciente p ON c.idPaciente = p.idPaciente
+LEFT JOIN paciente p ON c.idPaciente = p.idPaciente;
+
+/* EXERCÍCIO 11 */
+SELECT COUNT(idDentista) AS 'quantidade de dentistas', especialidade FROM dentista
+GROUP BY especialidade
+ORDER BY especialidade ASC
