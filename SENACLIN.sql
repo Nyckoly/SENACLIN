@@ -102,3 +102,8 @@ ORDER BY nome ASC
 SELECT d.nome AS 'nome do dentista', dataConsulta, p.nome AS 'nome do paciente', p.telefone AS 'telefone do paciente' FROM dentista d
 INNER JOIN consulta c ON d.idDentista = c.idDentista
 INNER JOIN paciente p ON c.idPaciente = p.idPaciente
+
+/* EXERCÍCIO 10 */
+SELECT d.nome AS 'nome do dentista', dataConsulta, p.nome AS 'nome do paciente', p.telefone AS 'telefone do paciente' FROM dentista d
+LEFT JOIN consulta c ON d.idDentista = c.idDentista
+LEFT JOIN paciente p ON c.idPaciente = p.idPaciente
