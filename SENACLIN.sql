@@ -92,3 +92,8 @@ UPDATE `senaclin`.`consulta` SET `dataConsulta`='2024-06-03', `horaConsulta`='10
 
 /* EXERCÍCIO 7 */
 UPDATE `senaclin`.`consulta` SET `tipoConsulta`='Tratamento', `observacao`='Tratamento será realizado em 10 consultas. Prioridade: Moderada. Remédio aplicado: Ponstan, caso sinta dores' WHERE  `idConsulta`=1;
+
+/* EXERCÍCIO 8 */
+SELECT nome, telefone FROM Paciente
+WHERE cidade='Santos'
+ORDER BY nome ASC
