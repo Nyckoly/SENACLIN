@@ -105,14 +105,18 @@ INNER JOIN paciente p ON c.idPaciente = p.idPaciente;
 
 /* EXERCÍCIO 10 */
 SELECT d.nome AS 'nome do dentista', dataConsulta, c.tipoConsulta AS 'tipo da consulta' FROM dentista d
-LEFT JOIN consulta c ON d.idDentista = c.idDentista
+LEFT JOIN consulta c ON d.idDentista = c.idDentista;
 
 /* EXERCÍCIO 11 */
 SELECT COUNT(idDentista) AS 'quantidade de dentistas', especialidade FROM dentista
 GROUP BY especialidade
-ORDER BY especialidade ASC
+ORDER BY especialidade ASC;
 
 /* EXERCÍCIO 12 */
 SELECT COUNT(idConsulta) AS 'quantidade de consultas', MONTH(dataConsulta) AS 'mês' FROM consulta
 WHERE MONTH(dataConsulta) = 6
-GROUP BY MONTH(dataConsulta)
+GROUP BY MONTH(dataConsulta);
+
+/* EXERCÍCIO 13 */
+SELECT tipoConsulta, COUNT(idConsulta) AS 'quantidade de consultas' FROM consulta
+GROUP BY tipoConsulta;
