@@ -1,5 +1,6 @@
 USE senaclin;
 
+/* CRIAÇÃO DE ENTIDADES E ATRIBUTOS */
 CREATE TABLE Paciente (
 idPaciente INT AUTO_INCREMENT NOT NULL,
 nome VARCHAR(50) NOT NULL,
@@ -36,5 +37,28 @@ CONSTRAINT FK_Consulta_Paciente FOREIGN KEY (idPaciente) REFERENCES paciente (id
 CONSTRAINT FK_Consulta_Dentista FOREIGN KEY (idDentista) REFERENCES Dentista (idDentista)
 );
 
+
+/* EXERCÍCIO 1 */
 ALTER TABLE `paciente`
 ADD COLUMN `cidade` VARCHAR(80) NOT NULL;
+
+/* EXERCÍCIO 2 */
+INSERT INTO paciente
+VALUES (1, 'Sophia', '81824923864', 'Rua', 'Doutor Marcos Vendramini', '835', NULL, '13997973328', 'Santos');
+
+INSERT INTO paciente
+VALUES (2, 'Ruan', '90212239880', 'Rua', 'Fausto Lourenço Gomes', '703', NULL, '13988228686', 'Santos');
+
+INSERT INTO paciente
+VALUES (3, 'Diego', '40007429819', 'Avenida', 'São Francisco', '974', NULL, '13995440299', 'Santos');
+
+INSERT INTO paciente
+VALUES (4, 'Isis', '46337535847', 'Rua', 'Um C', '980', NULL, '13983534499', 'Guarujá');
+
+INSERT INTO paciente
+VALUES (5, 'Andreia', '21199989819', 'Rua', 'Professor Celestino Bourrul', '265', NULL, '13999172941', 'São Vicente');
+
+INSERT INTO paciente
+VALUES (6, 'Marcos', '04065211824', 'Rua', 'Mário Augusto dos Santos Lopes', '347', NULL, '13988781045', 'São Vicente');
+
+/* EXERCÍCIO 3 */
