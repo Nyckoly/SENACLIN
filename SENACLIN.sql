@@ -62,7 +62,6 @@ INSERT INTO paciente
 VALUES (6, 'Marcos', '04065211824', 'Rua', 'Mário Augusto dos Santos Lopes', '347', NULL, '13988781045', 'São Vicente');
 
 /* EXERCÍCIO 3 */
-
 INSERT INTO dentista (nome, cro, especialidade, celular)
 VALUES ('Nicole', '111111SP', 'Ortodontia', '11989391713');
 
@@ -76,7 +75,6 @@ INSERT INTO dentista (nome, cro, especialidade, celular)
 VALUES ('Débora', '444444SP', 'Implantodontia', '11994717607');
 
 /* EXERCÍCIO 4 */
-
 INSERT INTO consulta (dataConsulta, horaConsulta, tipoConsulta, idPaciente, idDentista)
 VALUES ('2024-06-01', '09:30:00', 'Avaliação', 1, 1);
 
@@ -85,3 +83,7 @@ VALUES ('2024-06-02', '10:00:00', 'Avaliação', 2, 2);
 
 INSERT INTO consulta (dataConsulta, horaConsulta, tipoConsulta, idPaciente, idDentista)
 VALUES ('2024-06-02', '10:30:00', 'Avaliação', 3, 2);
+
+/* EXERCÍCIO 5 */
+UPDATE `senaclin`.`dentista` SET `especialidade`='Geral', `celular`='11994809800' WHERE  `idDentista`=4;
+
